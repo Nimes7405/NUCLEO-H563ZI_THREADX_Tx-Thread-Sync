@@ -1,0 +1,24 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug STM32H5 ThreadX (OpenOCD)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/NUCLEO-H563ZI_THREADX_Tx-Thread-Sync.elf",
+            "runToEntryPoint": "main",
+            "servertype": "openocd",
+            "configFiles": ["openocd/st_nucleo_h5.cfg"],
+            "searchDir": ["${workspaceFolder}"],
+            "serverpath": "/usr/local/bin/openocd",
+            "device": "stm32h563zitx",
+            "gdbPath": "/opt/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gdb",
+            "armToolchainPath": "/opt/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin",
+            "preLaunchTask": "Build STM32 (Make)",
+            "svdFile": "${workspaceFolder}/svd/STM32H563.svd",
+            "showDevDebugOutput": "both",
+            "gdbServerArgs": ["-c", "adapter speed 4000"]
+        }
+    ]
+}

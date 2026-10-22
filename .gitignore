@@ -1,0 +1,13 @@
+*.o
+*.d
+*.elf
+*.bin
+*.hex
+*.map
+*.lst
+build/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
